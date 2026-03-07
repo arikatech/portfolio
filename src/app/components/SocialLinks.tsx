@@ -8,17 +8,17 @@ import {
 const socials = [
   {
     label: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/arikatech",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/ariunbolor-tsendsuren-a25a78224/",
     icon: Linkedin,
   },
   {
     label: "Email",
-    href: "mailto:your@email.com",
+    href: "mailto:ariunbolor.tse@gmail.com",
     icon: Mail,
   },
   {

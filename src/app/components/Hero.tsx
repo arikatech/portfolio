@@ -16,8 +16,8 @@ export default function Hero() {
 
         {/* Small supporting line (keep it short) */}
         <p className="max-w-xl text-sm leading-relaxed text-[color:var(--text-muted)]">
-          I’m Ariunbolor — software developer focused on clean UI, performance,
-          and delightful interactions.
+          I’m Ariunbolor, a Computer Science and Data Analysis student building projects 
+          in backend development, web applications, and machine learning.
         </p>
 
         {/* Big hero art */}

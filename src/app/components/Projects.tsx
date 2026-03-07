@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { projects } from "./projects-data";
+import ExternalArrow from "./Arrow";
 
 export default function Projects() {
   return (
     <div className="space-y-16">
-      {/* Section title */}
       <div className="space-y-2">
         <p className="text-xs tracking-[0.25em] uppercase text-[color:var(--text-muted)]">
           Projects
@@ -14,107 +14,130 @@ export default function Projects() {
         </h2>
       </div>
 
-      {/* Project list */}
       <ul className="space-y-20">
-        {projects.map((project, idx) => (
-          <li key={project.title}>
-            <article
-              className="
-                group relative
-                grid gap-8
-                md:grid-cols-12
-                items-center
-              "
-            >
-              {/* Hover glow */}
-              <div
+        {projects.map((project, idx) => {
+          const isEven = idx % 2 === 0;
+
+          return (
+            <li key={project.title}>
+              <article
                 className="
-                  pointer-events-none
-                  absolute -inset-4
-                  rounded-2xl
-                  opacity-0
-                  border
-                  border-white/10
-                  transition
-                  group-hover:opacity-100
+                  group relative
+                  grid items-center gap-8
+                  md:grid-cols-12
                 "
-                style={{
-                  background:
-                    "radial-gradient(circle at center, rgba(56,189,248,0.15), transparent 60%)",
-                }}
-              />
-
-              {/* Text content */}
-              <div
-                className={[
-                  "relative z-10 space-y-4",
-                  idx % 2 === 0
-                    ? "md:col-span-6 md:col-start-1"
-                    : "md:col-span-6 md:col-start-7 md:text-right",
-                ].join(" ")}
               >
-                <h3 className="text-xl font-semibold">
-                  <a
-                    href={project.link}
-                    className="hover:underline text-[color:var(--text-main)]"
-                  >
-                    {project.title}
-                  </a>
-                </h3>
+                <div
+                  className="
+                    pointer-events-none absolute -inset-4 rounded-2xl
+                    border border-white/10 opacity-0 transition
+                    group-hover:opacity-100
+                  "
+                  style={{
+                    background:
+                      "radial-gradient(circle at center, rgba(56,189,248,0.15), transparent 60%)",
+                  }}
+                />
 
-                <p className="text-sm leading-relaxed text-[color:var(--text-muted)]">
-                  {project.description}
-                </p>
-
-                {/* Tech stack */}
-                <ul
+                <div
                   className={[
-                    "flex flex-wrap gap-2",
-                    idx % 2 !== 0 ? "md:justify-end" : "",
+                    "relative z-10 space-y-4 md:col-span-6",
+                    isEven
+                      ? "md:order-1 md:col-start-1 md:text-left"
+                      : "md:order-2 md:col-start-7 md:text-right",
                   ].join(" ")}
                 >
-                  {project.tech.map((tech) => (
-                    <li
-                      key={tech}
-                      className="
-                        rounded-full
-                        border border-white/10
-                        bg-white/5
-                        px-3 py-1
-                        text-xs
-                        text-[color:var(--accent-primary)]
-                        transition
-                        hover:border-white/20
-                        hover:bg-white/10
-                      "
+                  <h3 className="text-xl font-semibold">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[color:var(--text-main)] hover:underline"
                     >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      {project.title}
+                    </a>
+                  </h3>
 
-              {/* Image */}
-              <div
-                className={[
-                  "relative z-10",
-                  "md:col-span-6",
-                  idx % 2 === 0 ? "md:col-start-7" : "md:col-start-1",
-                ].join(" ")}
-              >
-                <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/40">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                  />
+                  <p className="text-sm leading-relaxed text-[color:var(--text-muted)]">
+                    {project.description}
+                  </p>
+
+                  <ul
+                    className={[
+                      "flex flex-wrap gap-2",
+                      !isEven ? "md:justify-end" : "",
+                    ].join(" ")}
+                  >
+                    {project.tech.map((tech) => (
+                      <li
+                        key={tech}
+                        className="
+                          rounded-full border border-white/10 bg-white/5
+                          px-3 py-1 text-xs
+                          text-[color:var(--accent-primary)]
+                          transition hover:border-white/20 hover:bg-white/10
+                        "
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </article>
-          </li>
-        ))}
+
+                <div
+                  className={[
+                    "relative z-10 md:col-span-6",
+                    isEven
+                      ? "md:order-2 md:col-start-7"
+                      : "md:order-1 md:col-start-1",
+                  ].join(" ")}
+                >
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block"
+                  >
+                    <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/40">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </article>
+            </li>
+          );
+        })}
       </ul>
+      {/* Resume link */}
+            <div className="pt-4">
+              <a
+                href="https://github.com/arikatech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex items-center gap-2
+                  text-sm font-medium
+                  text-[color:var(--accent-secondary)]
+                  hover:underline
+                "
+              >
+                View full Github
+                <ExternalArrow
+                  className="
+                    text-[color:var(--accent-secondary)]
+                    transition-transform
+                    group-hover:translate-x-0.5
+                    group-hover:-translate-y-0.5
+                  "
+                />
+      
+              </a>
+              </div>
     </div>
   );
 }

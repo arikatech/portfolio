@@ -19,12 +19,13 @@ export default function LeftPanel() {
             </h1>
 
             <p className="text-lg text-[color:var(--text-muted)]">
-              Software Developer
+              Software Developer & ML enthusiast
             </p>
           </div>
 
           <p className="max-w-sm text-sm leading-relaxed text-[color:var(--text-muted)]">
-            I build thoughtful digital experiences with modern web technologies.
+            Based in Italy, currently pursuing a bachelor’s degree in Data Analysis at the University of Messina. 
+            I build practical software projects across web, backend, and machine learning.
           </p>
 
           {/* Socials are visible on mobile */}

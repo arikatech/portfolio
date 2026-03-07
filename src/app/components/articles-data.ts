@@ -1,23 +1,10 @@
 export const articles = [
   {
-    title: "Designing Calm Interfaces in a Noisy World",
+    title: "How GPUs Became the Engine of Modern AI",
     description:
-      "Thoughts on building interfaces that feel intentional, focused, and humane.",
-    date: "2025",
-    link: "#",
+    "An accessible look at why GPUs, once built for graphics, became essential for training and running modern AI systems.",
+    date: " Mar 2026",
+    link: "https://medium.com/@ariunbolor.tse/how-gpus-became-the-engine-of-modern-ai-3d365011dac4",
   },
-  {
-    title: "Why I Chose Next.js for My Portfolio",
-    description:
-      "A breakdown of architectural decisions, tradeoffs, and lessons learned.",
-    date: "2025",
-    link: "#",
-  },
-  {
-    title: "Learning Algorithms Without Burning Out",
-    description:
-      "Practical strategies for staying consistent while studying computer science.",
-    date: "2024",
-    link: "#",
-  },
+  
 ];

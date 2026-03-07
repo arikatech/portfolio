@@ -4,7 +4,6 @@ import ExternalArrow from "./Arrow";
 export default function Articles() {
   return (
     <div className="space-y-16">
-      {/* Section title */}
       <div className="space-y-2">
         <p className="text-xs tracking-[0.25em] uppercase text-[color:var(--text-muted)]">
           Articles
@@ -14,12 +13,13 @@ export default function Articles() {
         </h2>
       </div>
 
-      {/* Articles list */}
       <ol className="space-y-6">
         {articles.map((article, idx) => (
           <li key={idx}>
             <a
               href={article.link}
+              target="_blank"
+              rel="noreferrer"
               className="
                 group relative
                 block rounded-xl
@@ -28,7 +28,6 @@ export default function Articles() {
                 hover:bg-white/5
               "
             >
-              {/* Hover glow */}
               <div
                 className="
                   pointer-events-none
@@ -45,12 +44,10 @@ export default function Articles() {
               />
 
               <div className="relative z-10 grid gap-4 sm:grid-cols-[80px_1fr]">
-                {/* Date */}
                 <span className="text-xs font-medium text-[color:var(--text-muted)]">
                   {article.date}
                 </span>
 
-                {/* Content */}
                 <div className="space-y-2">
                   <h3 className="text-base font-semibold leading-snug">
                     <span className="group-hover:underline">
@@ -68,12 +65,13 @@ export default function Articles() {
         ))}
       </ol>
 
-      {/* Optional footer link */}
       <div>
         <a
-          href="#"
+          href="https://medium.com/@ariunbolor.tse"
+          target="_blank"
+          rel="noreferrer"
           className="
-            inline-flex items-center gap-2
+            group inline-flex items-center gap-2
             text-sm font-medium
             text-[color:var(--accent-secondary)]
             hover:underline
@@ -88,7 +86,6 @@ export default function Articles() {
               group-hover:-translate-y-0.5
             "
           />
-
         </a>
       </div>
     </div>

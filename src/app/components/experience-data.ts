@@ -3,7 +3,7 @@ export const experiences = [
     period: "2024 - 2025",
     role: "Junior Software Developer",
     company: "TUS Solution",
-    link: "https://sg.tuss.io/",
+    link: "https://tuss.io/",
     description:
       "Working on the development of the tuss.io platform, writing and optimizing maintainable code as a full-stack junior software developer",
     tech: [
