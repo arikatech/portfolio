@@ -4,7 +4,7 @@ export const projects = [
     description:
       "A distributed food redistribution system that connects food donors with recipients through intelligent graph-based matching. Integrates three databases to manage structured transactions, process real-time events, and analyze relationships between organizations, food categories, and locations to identify suitable donation matches.",
     image: "/project-food.png",
-    link: "YOUR_GITHUB_REPOSITORY_URL",
+    link: "https://github.com/arikatech/food-surplus-redistribution",
     tech: [
       "Python",
       "MariaDB",
