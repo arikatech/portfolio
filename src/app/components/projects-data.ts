@@ -16,6 +16,20 @@ export const projects = [
     ],
   },
   {
+    title: "Studio Website Builder",
+    description:
+      "A no-code website builder that allows users to visually edit TSX-based components, customize text and colors in a Canva-like interface, and generate final JSX code for reuse in real projects.",
+    image: "/project-studio.png",
+    link: "https://github.com/arikatech/studio-web",
+    tech: [
+      "React",
+      "Tailwind Css",
+      "TypeScript",
+      "TSX",
+      "JSX Code Generation",
+    ],
+  },
+  {
     title: "Internship Aggregator & Alert System",
     description:
       "A production-grade backend system that aggregates remote internship and tech job postings from multiple sources, stores them in a structured database, and sends personalized alerts to users through a Telegram bot based on their selected tags.",
@@ -29,20 +43,6 @@ export const projects = [
       "Alembic",
       "Docker",
       "Telegram Bot API",
-    ],
-  },
-  {
-    title: "Studio Website Builder",
-    description:
-      "A no-code website builder that allows users to visually edit TSX-based components, customize text and colors in a Canva-like interface, and generate final JSX code for reuse in real projects.",
-    image: "/project-studio.png",
-    link: "https://github.com/arikatech/studio-web",
-    tech: [
-      "React",
-      "Tailwind Css",
-      "TypeScript",
-      "TSX",
-      "JSX Code Generation",
     ],
   },
   {
