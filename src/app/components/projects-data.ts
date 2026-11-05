@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: "Food Surplus Redistribution Network",
+    description:
+      "A distributed food redistribution system that connects food donors with recipients through intelligent graph-based matching. Integrates three databases to manage structured transactions, process real-time events, and analyze relationships between organizations, food categories, and locations to identify suitable donation matches.",
+    image: "/project-food.png",
+    link: "YOUR_GITHUB_REPOSITORY_URL",
+    tech: [
+      "Python",
+      "MariaDB",
+      "MongoDB",
+      "Neo4j",
+      "Cypher",
+      "MQTT",
+      "Docker",
+    ],
+  },
+  {
     title: "Internship Aggregator & Alert System",
     description:
       "A production-grade backend system that aggregates remote internship and tech job postings from multiple sources, stores them in a structured database, and sends personalized alerts to users through a Telegram bot based on their selected tags.",
